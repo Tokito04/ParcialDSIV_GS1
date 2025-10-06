@@ -16,6 +16,7 @@ namespace ParcialDSIV_GS1
         {
             InitializeComponent();
             MostrarPanel(pnlBienvenida);
+            pbPortada.Image = Properties.Resources.math;
         }
         // Estado del juego 
         private string jugadorNombre = "";
@@ -44,7 +45,8 @@ namespace ParcialDSIV_GS1
             pnlJuego.Visible = false;
             pnlReto.Visible = false;
             pnlFinal.Visible = false;
-
+            
+            if (destino != pnlBienvenida) this.Size = new Size(720, 600);
             destino.Visible = true;
             destino.BringToFront();
         }
@@ -57,7 +59,7 @@ namespace ParcialDSIV_GS1
             txtNombre.Focus();
         }
 
-        // Registro Jueg
+        // Registro Juego
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             if (!ValidarRegistro()) return;
@@ -224,7 +226,7 @@ namespace ParcialDSIV_GS1
         }
 
         // Eventos del Reto
-        private void btnSeleccionar_Click(object sender, EventArgs e)
+        private async void btnSeleccionar_Click(object sender, EventArgs e)
         {
             if (lstAnimales.SelectedItem == null)
             {
@@ -238,12 +240,16 @@ namespace ParcialDSIV_GS1
             string mensajeAnimal = compacto.Length > 5 ? "Ese animal es poderoso" : "Ese animal es ágil";
             lblResultadoReto.Text = mensajeAnimal;
 
+            
             // Llenar panel final
             lblFinalJugador.Text = $"Jugador: {jugadorNombre}";
             lblFinalAnimal.Text = $"Animal: {animalElegido}";
             lblFinalMensaje.Text = $"Mensaje: {mensajeAnimal}";
             lblFinalColor.Text = $"Color favorito: {colorFavorito}";
             lblFinalEnergia.Text = $"Energía final: {energiaActual}/{energiaMax}";
+            lblMensajeDivertido.Text = energiaActual == energiaMax ? $"Cálculos completados. Sistema detecta un genio llamado {jugadorNombre} ." :
+                                        energiaActual >= energiaMax / 2 ? "Aunque tu energía bajó, tu espíritu de jugador sigue al 100%" : "Error 404: Energía agotada, pero estilo intacto";
+            Task.Delay(2000).Wait(); // Esperar 2 segundos para que el usuario vea el mensaje
 
             MostrarPanel(pnlFinal);
         }
@@ -281,6 +287,8 @@ namespace ParcialDSIV_GS1
         {
             Close();
         }
+
+        
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
