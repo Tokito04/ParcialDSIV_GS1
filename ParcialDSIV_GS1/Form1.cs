@@ -34,9 +34,9 @@ namespace ParcialDSIV_GS1
         private const int INTENTOS_POR_OP = 3;
         private const int PENALIZACION = 25;
 
-        private readonly Random rng = new Random();
+        private Random rng = new Random();
 
-        // Navegación entre paneles
+
         
         private void MostrarPanel(Panel destino)
         {
@@ -212,20 +212,7 @@ namespace ParcialDSIV_GS1
             }
         }
 
-        private void txtRespuesta_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permite dígitos, control (Backspace), y Enter para validar
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                return;
-            }
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                e.Handled = true;
-                btnValidar.PerformClick();
-            }
-        }
+
 
         //  Navegación a Reto
         private void IrAReto()
