@@ -466,7 +466,7 @@
             // 
             this.lblMensajeDivertido.AutoSize = true;
             this.lblMensajeDivertido.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensajeDivertido.Location = new System.Drawing.Point(376, 483);
+            this.lblMensajeDivertido.Location = new System.Drawing.Point(376, 465);
             this.lblMensajeDivertido.Name = "lblMensajeDivertido";
             this.lblMensajeDivertido.Size = new System.Drawing.Size(154, 21);
             this.lblMensajeDivertido.TabIndex = 8;
