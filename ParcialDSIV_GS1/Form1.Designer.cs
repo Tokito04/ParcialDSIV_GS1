@@ -58,6 +58,8 @@
             this.lstAnimales = new System.Windows.Forms.ListBox();
             this.lblReto = new System.Windows.Forms.Label();
             this.pnlFinal = new System.Windows.Forms.Panel();
+            this.pbAnimal = new System.Windows.Forms.PictureBox();
+            this.lblMensajeDivertido = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnNuevoJuego = new System.Windows.Forms.Button();
             this.lblFinalEnergia = new System.Windows.Forms.Label();
@@ -66,7 +68,6 @@
             this.lblFinalAnimal = new System.Windows.Forms.Label();
             this.lblFinalJugador = new System.Windows.Forms.Label();
             this.lblFinalTitulo = new System.Windows.Forms.Label();
-            this.lblMensajeDivertido = new System.Windows.Forms.Label();
             this.pnlBienvenida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPortada)).BeginInit();
             this.pnlRegistro.SuspendLayout();
@@ -74,6 +75,7 @@
             this.pnlJuego.SuspendLayout();
             this.pnlReto.SuspendLayout();
             this.pnlFinal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAnimal)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBienvenida
@@ -92,7 +94,7 @@
             // 
             this.btnComenzar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnComenzar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComenzar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnComenzar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnComenzar.Location = new System.Drawing.Point(582, 629);
             this.btnComenzar.Margin = new System.Windows.Forms.Padding(4);
             this.btnComenzar.Name = "btnComenzar";
@@ -187,7 +189,7 @@
             // 
             this.btnContinuar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnContinuar.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinuar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnContinuar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnContinuar.Location = new System.Drawing.Point(100, 495);
             this.btnContinuar.Margin = new System.Windows.Forms.Padding(4);
             this.btnContinuar.Name = "btnContinuar";
@@ -256,13 +258,7 @@
             "Rojo",
             "Verde",
             "Azul",
-            "Cyan",
             "Amarillo",
-            "Magenta",
-            "Marrón",
-            "Violeta",
-            "Naranja",
-            "Blanco",
             "Negro"});
             this.cboColorFavorito.Location = new System.Drawing.Point(100, 372);
             this.cboColorFavorito.Margin = new System.Windows.Forms.Padding(4);
@@ -399,7 +395,7 @@
             // 
             this.btnSeleccionar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnSeleccionar.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSeleccionar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSeleccionar.Location = new System.Drawing.Point(55, 288);
             this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeleccionar.Name = "btnSeleccionar";
@@ -439,6 +435,7 @@
             // 
             // pnlFinal
             // 
+            this.pnlFinal.Controls.Add(this.pbAnimal);
             this.pnlFinal.Controls.Add(this.lblMensajeDivertido);
             this.pnlFinal.Controls.Add(this.btnSalir);
             this.pnlFinal.Controls.Add(this.btnNuevoJuego);
@@ -455,11 +452,31 @@
             this.pnlFinal.Size = new System.Drawing.Size(1279, 719);
             this.pnlFinal.TabIndex = 4;
             // 
+            // pbAnimal
+            // 
+            this.pbAnimal.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pbAnimal.Location = new System.Drawing.Point(380, 37);
+            this.pbAnimal.Name = "pbAnimal";
+            this.pbAnimal.Size = new System.Drawing.Size(588, 409);
+            this.pbAnimal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAnimal.TabIndex = 9;
+            this.pbAnimal.TabStop = false;
+            // 
+            // lblMensajeDivertido
+            // 
+            this.lblMensajeDivertido.AutoSize = true;
+            this.lblMensajeDivertido.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensajeDivertido.Location = new System.Drawing.Point(376, 483);
+            this.lblMensajeDivertido.Name = "lblMensajeDivertido";
+            this.lblMensajeDivertido.Size = new System.Drawing.Size(154, 21);
+            this.lblMensajeDivertido.TabIndex = 8;
+            this.lblMensajeDivertido.Text = "Mensaje Divertido";
+            // 
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnSalir.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(53, 429);
+            this.btnSalir.Location = new System.Drawing.Point(55, 399);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(130, 34);
@@ -472,7 +489,7 @@
             // 
             this.btnNuevoJuego.BackColor = System.Drawing.Color.SeaGreen;
             this.btnNuevoJuego.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoJuego.Location = new System.Drawing.Point(53, 367);
+            this.btnNuevoJuego.Location = new System.Drawing.Point(55, 337);
             this.btnNuevoJuego.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevoJuego.Name = "btnNuevoJuego";
             this.btnNuevoJuego.Size = new System.Drawing.Size(129, 34);
@@ -547,16 +564,6 @@
             this.lblFinalTitulo.TabIndex = 0;
             this.lblFinalTitulo.Text = "Resumen del Juego";
             // 
-            // lblMensajeDivertido
-            // 
-            this.lblMensajeDivertido.AutoSize = true;
-            this.lblMensajeDivertido.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensajeDivertido.Location = new System.Drawing.Point(53, 288);
-            this.lblMensajeDivertido.Name = "lblMensajeDivertido";
-            this.lblMensajeDivertido.Size = new System.Drawing.Size(164, 21);
-            this.lblMensajeDivertido.TabIndex = 8;
-            this.lblMensajeDivertido.Text = "Mensaje Divertido: ";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -583,6 +590,7 @@
             this.pnlReto.PerformLayout();
             this.pnlFinal.ResumeLayout(false);
             this.pnlFinal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAnimal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -628,6 +636,7 @@
         private System.Windows.Forms.Label lblFinalAnimal;
         private System.Windows.Forms.Label lblFinalJugador;
         private System.Windows.Forms.Label lblMensajeDivertido;
+        private System.Windows.Forms.PictureBox pbAnimal;
     }
 }
 

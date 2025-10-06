@@ -46,7 +46,12 @@ namespace ParcialDSIV_GS1
             pnlReto.Visible = false;
             pnlFinal.Visible = false;
             
-            if (destino != pnlBienvenida) this.Size = new Size(720, 600);
+            if (destino == pnlFinal)
+                this.Size = new Size(900, 450);
+            else if (destino == pnlBienvenida)
+                this.Size = new Size(1100, 720);
+            else
+                this.Size = new Size(800, 600);
             destino.Visible = true;
             destino.BringToFront();
         }
@@ -109,7 +114,7 @@ namespace ParcialDSIV_GS1
         {
             pgbEnergia.Minimum = 0;
             pgbEnergia.Maximum = energiaMax;
-            pgbEnergia.Value = energiaActual- energiaMax;
+            pgbEnergia.Value = energiaMax;
 
             rondaActual = 1;
             intentosRestantes = INTENTOS_POR_OP;
@@ -246,9 +251,30 @@ namespace ParcialDSIV_GS1
             lblFinalAnimal.Text = $"Animal: {animalElegido}";
             lblFinalMensaje.Text = $"Mensaje: {mensajeAnimal}";
             lblFinalColor.Text = $"Color favorito: {colorFavorito}";
+            if (colorFavorito.ToLower() == "rojo")
+                lblFinalColor.ForeColor = Color.Red;
+            else if (colorFavorito.ToLower() == "azul")
+                lblFinalColor.ForeColor = Color.Blue;
+            else if (colorFavorito.ToLower() == "verde")
+                lblFinalColor.ForeColor = Color.Green;
+            else if (colorFavorito.ToLower() == "amarillo")
+                lblFinalColor.ForeColor = Color.Goldenrod;
+            else
+                lblFinalColor.ForeColor = Color.Black;
             lblFinalEnergia.Text = $"Energía final: {energiaActual}/{energiaMax}";
-            lblMensajeDivertido.Text = energiaActual == energiaMax ? $"Cálculos completados. Sistema detecta un genio llamado {jugadorNombre} ." :
+            lblMensajeDivertido.Text = energiaActual == energiaMax ? $"Cálculos completados. Sistema detecta un genio llamado {jugadorNombre}." :
                                         energiaActual >= energiaMax / 2 ? "Aunque tu energía bajó, tu espíritu de jugador sigue al 100%" : "Error 404: Energía agotada, pero estilo intacto";
+            if (animalElegido.ToLower().Equals("perro"))
+                pbAnimal.Image = Properties.Resources.perros;
+            else if (animalElegido.ToLower().Contains("gato"))
+                pbAnimal.Image = Properties.Resources.gatos;
+            else if (animalElegido.ToLower().Contains("ratón"))
+                pbAnimal.Image = Properties.Resources.ratones;
+            else if (animalElegido.ToLower().Contains("elefante"))
+                pbAnimal.Image = Properties.Resources.elefantes;
+            else if (animalElegido.ToLower().Contains("león"))
+                pbAnimal.Image = Properties.Resources.leones;
+
             Task.Delay(2000).Wait(); // Esperar 2 segundos para que el usuario vea el mensaje
 
             MostrarPanel(pnlFinal);

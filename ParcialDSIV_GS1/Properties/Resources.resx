@@ -118,8 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="elefantes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\elefantes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gatos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gatos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="leones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\leones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="math" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\math.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Carátula para la pantalla de inicio</comment>
+  </data>
+  <data name="perros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\perros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ratones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ratones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
